@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="codemirror/lib/codemirror.css"/>
+		<script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		
+		<script type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
+		<script type="text/javascript" src="codemirror/mode/clike/clike.js"></script>
+		<script type="text/javascript" src="codemirror/mode/python/python.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="codemirror/theme/abcdef.css"/>
+		<link rel="stylesheet" type="text/css" href="codemirror/theme/3024-day.css"/>
+		<link rel="stylesheet" type="text/css" href="codemirror/theme/erlang-dark.css"/>
+		<link rel="stylesheet" type="text/css" href="codemirror/addon/hint/show-hint.css"/>
+		<script type="text/javascript">
+			$(function(){
+				var editor = CodeMirror.fromTextArea(document.getElementById('my_code'),{
+						lineNumbers: true,
+						mode:"clike",　
+						lineWrapping:true,
+						matchBrackets:true,
+				});
+				$("#select_theme").change(function(){
+					var theme = $(this).val();
+					editor.setOption("theme",theme);
+				});
+				$("#select_dome").change(function(){
+					var mode = $(this).val();
+					var my_code = editor.getValue();
+					if(mode=="c/c++")
+					{
+						editor.setOption("mode","clike");
+						editor.setValue();
+					}
+					else
+					{
+						editor.setOption("mode",mode);
+						editor.setValue();
+					}
+				});
+				
+				$("#scbutton").click(function(){
+					if(editor.getValue()==null)
+					{
+						alert("请输入代码");	
+					}
+					else
+					{
+						$.ajax({
+							url:"SaveCode",
+							type:"post",
+							dataTpye:"json",
+							data:{
+								"qid":50,
+								"questionTitle":"ok",
+								"questionDescription":"ok",
+								"inputFormat":"ok",
+								"outputFormat":"ok",
+								"inputSample":"ok",
+								"outputSample":"ok",
+								"code":editor.getValue(),
+								"codeType":"cpp",
+								"uid":50,
+								
+							},
+							success:function(dataJson){
+								alert(dataJson);
+							}
+						});
+					}
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<button id="scbutton">提交代码</button>
+		</div>
+		<div class="controls">
+			<select id='select_theme'>
+				<option selected>default</option>
+				<option>3024-day</option>
+				<option>erlang-dark</option>
+				<option>abcdef</option>
+			</select>
+		</div>
+		<div class="controls">
+			<select id='select_dome'>
+				<option selected>c/c++</option>
+				<option>python</option>
+				<option>javascript</option>
+			</select>
+		</div>
+		<div id="code_div" style="width:1000px;height:100px">
+			<textarea id="my_code" ></textarea>
+		</div>
+
+	</body>
+</html>

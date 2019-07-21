@@ -1,0 +1,156 @@
+.banner{
+    background: linear-gradient(135deg, #44b1ea 0%, #111111 74%);
+    height: 513px;
+    left: 0;
+    opacity: 1;
+    color: white;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    z-index: 1;
+    margin: 0;
+}
+
+.banner-title{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner-title h1{
+    font-weight: 300;
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    vertical-align: baseline;
+}
+
+.banner-title p{
+    font-size: 2.2rem;
+    line-height: 1.65;
+    margin: 0 0 2rem 0;
+    color: rgba(255, 255, 255, 0.5);
+    vertical-align: baseline;
+}
+
+.wrapper{
+    padding-top: 90px;
+}
+
+.wrapper-title h1{
+    color: #555555;
+    font-size: 4rem;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+    vertical-align: baseline;
+}
+
+.wrapper-title h2{
+    color: #555555;
+    font-size: 3.3rem;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+    vertical-align: baseline;
+}
+
+.wrapper-title h3{
+    color: #555555;
+    font-size: 2.25rem;
+    font-weight: 200;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 0 0 4.5rem 0;
+    vertical-align: baseline;
+}
+
+.wrapper-title h4{
+    color: #555555;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 0 0 4.5rem 0;
+    vertical-align: baseline;
+}
+
+.wrapper-activity{
+    padding: 30px;
+}
+
+.wrapper-icon{
+    color: #cc1111;
+    font-size: 50px;
+}
+
+.wrapper-icon-title{
+    color: #555555;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.wrapper-icon-content{
+    color: #555555;
+}
+
+.center-banner{
+    height: 262px;
+    opacity: 1;
+    color: white;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    z-index: 1;
+    margin: 60px 0 0 0;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.center-banner-title{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.center-banner-title h1{
+    font-weight: 300;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: white !important;
+    text-transform: uppercase;
+    vertical-align: baseline;
+}
+
+.center-banner-title p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: white !important;
+    margin: 0 0 2rem 0;
+    color: rgba(255, 255, 255, 0.5);
+    vertical-align: baseline;
+}
+
+.builder-introduction{
+    padding: 30px;
+    height: 290px;
+}
+
+.builder-introduction-content{
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: #555555;
+    vertical-align: baseline;
+    margin: 20px 0 20px 0;
+}
+
+img.builder-introduction-photo{
+    width: 70px;
+}
+
+.navbar{
+    margin-bottom: 0;
+}

@@ -1,0 +1,80 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>修改密码</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="/Blog/images/favicon.ico"> 
+<link href="/Blog/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="/Blog/css/font-awesome.css"
+	rel="stylesheet">
+<link href="/Blog/css/animate.css"
+	rel="stylesheet">
+<link href="/Blog/css/style.css"
+	rel="stylesheet">
+<link href="css/login.css"
+	rel="stylesheet">
+
+<script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+
+</head>
+
+<body class="signin" >
+	<div class="signinpanel">
+		<div class="row">
+			<div class="col-sm-7">
+				<div class="signin-info">
+	
+					<div class=" tooltip-demo ">
+							<a href="index.html"
+							style="color:#3c3a39;margin-left:15px;">首页&raquo;</a></strong>
+
+					</div>
+				</div>
+			</div>
+			<div class="" style="width: 800px;height: 300px;">
+				<form id="modify" action="modify" method="post">
+					<p class="m-t-md"><font size="5" color="">修改密码 </font></p>
+					<input type="password" id="old_password" name="old_password" class="form-control pword m-b" placeholder="原密码" /> 
+					<input type="password" name="new_password" id="new_password" class="form-control pword m-b" placeholder="新密码" /> 
+					<input type="text" name="email" id="email" class="form-control" placeholder="邮箱" /> 
+					<button type="submit" class="btn btn-success btn-block">确认修改</button>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+	<div class="gohome" style="display:none"></div>
+	<script src="/Blog/js/jquery.min.js"></script>
+	<script src="/Blog/js/bootstrap.min.js"></script>
+	<script src="/Blog/js/content.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+	$(".gohome").css("display","none");
+});
+
+
+var login=function(){
+	var username=$("#username").val().replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+	var password=$("#password").val().replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+	$("#username").val(username);
+	$("#password").val(password);
+	$("#login").submit();
+}
+</script>
+</body>
+
+</html>

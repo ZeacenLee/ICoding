@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebContent/questionBank.jsp=UTF-8
+encoding//WebContent/questionEditor.jsp=UTF-8
+encoding//src/com/iCoding/dao/impl/UserDaoImpl.java=UTF-8
+encoding//src/com/iCoding/domain/Barrage.java=UTF-8
+encoding//src/com/iCoding/sevlet/GetBarrage.java=UTF-8
+encoding//src/com/iCoding/sevlet/GetlishidanmuServlet.java=UTF-8
+encoding//src/com/iCoding/sevlet/RegisterServlet.java=UTF-8
+encoding/<project>=UTF-8
